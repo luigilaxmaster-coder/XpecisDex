@@ -1,20 +1,20 @@
 <div align="center">
-  <img src=".github/assets/banner.png" alt="XpecisDex Banner" style="border-radius: 12px; margin-bottom: 20px;">
+  <img src="faunago/assets/brand/hero_diorama.png" alt="FaunaGO Hero" width="800" style="border-radius: 12px; margin-bottom: 20px;">
 
-  <h1>🌌 XpecisDex</h1>
-  <p><b>El Ecosistema Definitivo de Generación y Colección de Especies en 3D Voxel</b></p>
+  <h1>🍃 FaunaGO</h1>
+  <p><b>Aplicación móvil que convierte capturas reales de un animal en un asset voxel editable (.vox) y un modelo animado (.glb)</b></p>
 
   <!-- Badges -->
   <p>
     <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
     <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo" />
-    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white" alt="FastAPI" />
     <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
   </p>
 
   <h3>Estado del Proyecto: En Desarrollo Activo</h3>
-  <!-- Progress Bar -->
-  <img src="https://geps.dev/progress/75" alt="Progreso 75%" />
+  <img src="https://geps.dev/progress/85" alt="Progreso 85%" />
 </div>
 
 <br>
@@ -23,89 +23,100 @@
 
 ## 📖 Descripción del Proyecto
 
-**XpecisDex** es una revolucionaria plataforma multipropósito que combina la emoción de un juego estilo *Pokémon Go* con el poder de la generación procedural e Inteligencia Artificial para modelos en **3D Voxel**. 
+**FaunaGO** es una aplicación Expo/React Native con backend FastAPI. Mantiene una identidad visual verde oscuro y ámbar, enfocada al 100% en la precisión de la realidad: **no usa especies aleatorias, progreso simulado ni animales genéricos de reemplazo.**
 
-El proyecto se compone de múltiples sistemas interconectados, desde la generación de activos (assets) hasta la interacción y colección de los mismos en Realidad Aumentada (AR).
-
-<br>
-
-## 🧩 Arquitectura y Módulos
-
-El repositorio actúa como un **monorepo** que consolida las diferentes áreas del ecosistema:
-
-| Módulo / Carpeta | Descripción | Tecnología Principal | Estado |
-| :--- | :--- | :---: | :---: |
-| 📱 **`faunago/`** | Aplicación móvil tipo *Pokémon Go* para explorar, capturar y visualizar especies voxelizadas en 3D. | React Native / Expo | 🟢 Activo |
-| 🤖 **`goxel-mcp/`** | Servidor **MCP** (Model Context Protocol) para la generación inteligente y automatizada de archivos `.vox`. | Node.js | 🟢 Activo |
-| 🎲 **`3d-voxel-gen/`** | Scripts y herramientas especializadas en la conversión de texto a modelos Voxel (`text2vox`). | Python | 🟡 Desarrollo |
-| 🦎 **Scripts Voxel** | Scripts (ej. `chameleon5_voxel.py`) y manifiestos para la creación procedural de especies hiper-detalladas. | Python / JSON | 🟢 Activo |
-| 🎮 **`AlterLab_GameForge/`** | Herramientas experimentales de motor y renderizado de mecánicas de juego. | C++ / JS | 🟣 Experimental |
+Cada captura real se procesa local y remotamente para generar una plantilla anatómica voxelizada hiperprecisa y animada, respetando la biometría original.
 
 <br>
 
-## 🖼️ Interfaz (FaunaGo)
+## 🖼️ Interfaz del Juego (Real)
 
 <div align="center">
-  <img src=".github/assets/faunago.png" width="300" alt="FaunaGo Mockup" style="border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+  <img src="faunago/.design-qa-home.png" width="350" alt="FaunaGO Gameplay" style="border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
   <br><br>
-  <p><i>FaunaGo: Explora tu mundo y descubre especies exóticas en 3D Voxel.</i></p>
+  <p><i>Pantalla de inicio, interfaz y diseño real de la aplicación (Design QA).</i></p>
 </div>
 
 <br>
 
-## 🚀 Guía de Inicio Rápido
+## 🧩 Flujo Implementado y Arquitectura (AI Pipeline)
 
-### 1. Requisitos Previos
-- **Node.js** (v18+)
-- **Python** (3.10+)
-- **Expo CLI** (`npm install -g expo-cli`)
-- Entorno de desarrollo para React Native (Android Studio / Xcode)
+El pipeline de inferencia es riguroso: una foto siempre queda marcada como *aproximada*. La fidelidad alta requiere geometría multivista verificada; ninguna región inferida se presenta como observada.
 
-### 2. Instalación y Ejecución de FaunaGo
-```bash
-# Clonar el repositorio
-git clone https://github.com/luigilaxmaster-coder/XpecisDex.git
-cd XpecisDex/faunago
+| Paso | Sistema / Modelo | Descripción |
+| :--- | :--- | :--- |
+| 📸 **Captura** | `CameraView` | Captura rápida o multivista con control de calidad local. |
+| 🛡️ **Subida** | FastAPI + S3 | Subida privada verificada y trabajo recuperable en la nube. |
+| 🔍 **Detección** | `MegaDetector 5a` + `SAM 2.1` | Segmentación Hiera Small de alta precisión anatómica. |
+| 🧬 **Análisis** | `BioCLIP 2` + `RTMPose-M` | Extracción de perfil visual, proporciones exactas y AP-10K. |
+| 🧱 **Voxelización** | `COLMAP` + `Open3D` | Reconstrucción anatómica basada en puntos y generación Voxel Kawaii. |
+| 🏃 **Animación** | Pipeline Propio | Construcción de VOX, rig dinámico, animación y exportación glTF 2.0. |
 
-# Instalar dependencias e iniciar
+<br>
+
+## 🚀 Guía de Inicio Rápido (Windows + GPU NVIDIA)
+
+```powershell
+cd faunago
 npm install
-npm run dev
+Copy-Item .env.example .env
+
+# Configurar Entorno Virtual y Backend
+cd apps\api
+python -m venv .venv
+.venv\Scripts\pip install -r requirements.txt
+Copy-Item .env.example .env
+cd ..\..
+
+# Instalar y verificar modelos
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts\setup-windows-gpu.ps1
+npm run models:verify
 ```
 
-### 3. Servidor Goxel-MCP
-```bash
-cd ../goxel-mcp
-npm install
-# Conecta el servidor MCP a tu entorno local o IA para generar Voxel art automáticamente.
+> **Nota Importante:** Configure `EXPO_PUBLIC_API_URL` con la IP LAN de su equipo en el `.env` móvil y use `INFERENCE_DEVICE=cuda` en `apps/api/.env` para aprovechar al 100% la aceleración de su RTX.
+
+### Ejecución de Desarrollo (3 Terminales)
+```powershell
+# 1. Iniciar API REST
+npm run dev:api
+
+# 2. Iniciar Worker de Inferencia
+npm run dev:worker
+
+# 3. Iniciar Mobile App (Expo)
+npm start
 ```
 
 <br>
 
-## 🎨 Paleta de Colores y Estética
+## 🎨 Paleta de Colores y Estética Oficial
 
-El proyecto utiliza una estética moderna enfocada en el **Glassmorphism** y **Cyberpunk Neón** para la interfaz, contrastando con la belleza retro-pixelada de los modelos Voxel.
+El proyecto utiliza una estética enfocada en la naturaleza profunda, con tonos Verde Oscuro y detalles Ámbar brillantes.
 
 | Elemento | Hex | Color Visual |
 | --- | --- | --- |
-| **Fondo Principal** | `#0D1117` | <img src="https://via.placeholder.com/15/0D1117/000000?text=+" width="15"/> Dark |
-| **Neón Primario** | `#00F0FF` | <img src="https://via.placeholder.com/15/00F0FF/000000?text=+" width="15"/> Cyan |
-| **Acento** | `#FF0055` | <img src="https://via.placeholder.com/15/FF0055/000000?text=+" width="15"/> Pink |
-| **Paneles (Glass)** | `rgba(255,255,255,0.05)` | Translúcido |
+| **Fondo Principal** | `#1A2421` | <img src="https://via.placeholder.com/15/1A2421/000000?text=+" width="15"/> Dark Forest Green |
+| **Acento Principal** | `#FFB000` | <img src="https://via.placeholder.com/15/FFB000/000000?text=+" width="15"/> Bright Amber |
+| **Textos y UI** | `#F5F5F5` | <img src="https://via.placeholder.com/15/F5F5F5/000000?text=+" width="15"/> Off-White |
 
 <br>
 
-## 🗺️ Hoja de Ruta (Roadmap)
+## 🔐 Contrato Semántico del Escáner y Privacidad
 
-- [x] Estructura inicial del Monorepo.
-- [x] Generación procedural de Voxels (`chameleon`, `beagle`, `alien`).
-- [x] Servidor MCP integrado (`goxel-mcp`).
-- [ ] Renderizado en AR dentro de la app móvil.
-- [ ] Pokedex de Especies (XpecisDex) interactiva.
-- [ ] Soporte multijugador para intercambios.
+Las operaciones de escaneo están limitadas a su creador y la mayoría son reintentables o idempotentes. **Ningún animal entra al inventario antes de que el usuario confirme la identificación y pulse guardar.**
+
+- `POST /v1/scans` (Inicia el proceso)
+- `POST /v1/scans/{scan_id}/assets/presign` (Subida S3)
+- `POST /v1/scans/{scan_id}/assets/complete` 
+- `POST /v1/scans/{scan_id}/finalize` (Inicia inferencia AI)
+- `POST /v1/scans/{scan_id}/confirm-classification`
+- `POST /v1/scans/{scan_id}/save-to-collection` (Guardado explícito)
+
+*(El modelo de amenazas completo se encuentra en `docs/SECURITY.md`)*
 
 <br>
 
 ---
 <div align="center">
-  <p>Construido con ❤️ por <b>LuigiLaxMaster</b></p>
+  <p>Construido con ❤️ enfocándose en la naturaleza y precisión.</p>
 </div>
