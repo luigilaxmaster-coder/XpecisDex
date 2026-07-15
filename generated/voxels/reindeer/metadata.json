@@ -1,0 +1,48 @@
+{
+  "name": "blocky_pink_reindeer",
+  "protocol": "VGM-P",
+  "voxelCount": 4448,
+  "palette": {
+    "hoof_black": {
+      "r": 66,
+      "g": 66,
+      "b": 68
+    },
+    "belly_white": {
+      "r": 255,
+      "g": 255,
+      "b": 255
+    },
+    "body_mid_grey": {
+      "r": 153,
+      "g": 155,
+      "b": 157
+    },
+    "body_dark_grey": {
+      "r": 130,
+      "g": 132,
+      "b": 134
+    },
+    "antler_pink": {
+      "r": 220,
+      "g": 88,
+      "b": 125
+    },
+    "antler_dark": {
+      "r": 189,
+      "g": 62,
+      "b": 98
+    },
+    "eye_black": {
+      "r": 30,
+      "g": 30,
+      "b": 30
+    },
+    "nose_black": {
+      "r": 50,
+      "g": 50,
+      "b": 50
+    }
+  },
+  "status": "success"
+}

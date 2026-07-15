@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "skills": {
+    "higgsfield-generate": {
+      "source": "higgsfield-ai/skills",
+      "sourceType": "github",
+      "skillPath": "higgsfield-generate/SKILL.md",
+      "computedHash": "48a2928e6044847a2456ad87baa93c01c37ba181c186e62bc913234af1a480e2"
+    },
+    "higgsfield-marketplace-cards": {
+      "source": "higgsfield-ai/skills",
+      "sourceType": "github",
+      "skillPath": "higgsfield-marketplace-cards/SKILL.md",
+      "computedHash": "dffdd858efc72915e4d9f600626912180e6b9b40a4c745a28d3099ea88c0dfeb"
+    },
+    "higgsfield-websites": {
+      "source": "higgsfield-ai/skills",
+      "sourceType": "github",
+      "skillPath": "higgsfield-websites/SKILL.md",
+      "computedHash": "a407f3807f7c3f32903bb9f8ad38d44a57d160be1b76465fb19ff12787ef64fb"
+    },
+    "voxel-art": {
+      "source": "smithery.ai",
+      "sourceType": "well-known",
+      "computedHash": "7a0a460f72869e691b2f2b4c2c7105580c51504f83ed186fa2fc95a9efef24a9"
+    }
+  }
+}

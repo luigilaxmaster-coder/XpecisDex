@@ -1,0 +1,34 @@
+{
+  "name": "chameleon_reference_asset",
+  "assetType": "animal",
+  "species": "chameleon",
+  "style": "premium_voxel_semi_realistic",
+  "dimensions": {
+    "x": 128,
+    "y": 72,
+    "z": 80
+  },
+  "seed": 8127,
+  "pieces": [
+    "01_branch",
+    "02_body_main",
+    "03_back_arch",
+    "04_head_main",
+    "05_head_casque",
+    "06_snout",
+    "07_eye_turret_right",
+    "08_eye_detail",
+    "09_front_left_leg",
+    "10_front_right_leg",
+    "11_back_left_leg",
+    "12_back_right_leg",
+    "13_gripping_toes",
+    "14_spiral_tail",
+    "15_dorsal_spikes",
+    "16_cyan_lateral_stripe",
+    "17_scale_noise",
+    "18_color_spots",
+    "19_shadow_pass",
+    "20_highlight_pass"
+  ]
+}

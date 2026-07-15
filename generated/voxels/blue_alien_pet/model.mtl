@@ -1,0 +1,25 @@
+# Voxel Materials
+newmtl mat1
+Kd 0.227 0.388 0.561
+newmtl mat3
+Kd 0.141 0.286 0.431
+newmtl mat6
+Kd 0.655 0.843 0.871
+newmtl mat7
+Kd 0.525 0.761 0.796
+newmtl mat9
+Kd 0.843 0.631 0.788
+newmtl mat11
+Kd 0.420 0.173 0.518
+newmtl mat12
+Kd 0.298 0.118 0.373
+newmtl mat13
+Kd 0.027 0.035 0.051
+newmtl mat14
+Kd 0.961 0.984 1.000
+newmtl mat15
+Kd 0.788 0.094 0.141
+newmtl mat17
+Kd 0.086 0.157 0.243
+newmtl mat18
+Kd 0.059 0.153 0.251
