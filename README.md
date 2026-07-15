@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="faunago/assets/brand/hero_diorama.png" alt="FaunaGO Hero" width="800" style="border-radius: 12px; margin-bottom: 20px;">
-
+  <img src="faunago/assets/brand/app_icon.png" alt="FaunaGO Logo" width="120" style="border-radius: 20px; margin-bottom: 10px;">
   <h1>🍃 FaunaGO</h1>
   <p><b>Aplicación móvil que convierte capturas reales de un animal en un asset voxel editable (.vox) y un modelo animado (.glb)</b></p>
 
@@ -14,7 +13,7 @@
   </p>
 
   <h3>Estado del Proyecto: En Desarrollo Activo</h3>
-  <img src="https://geps.dev/progress/85" alt="Progreso 85%" />
+  <img src="https://geps.dev/progress/44" alt="Progreso 44%" />
 </div>
 
 <br>
@@ -29,13 +28,20 @@ Cada captura real se procesa local y remotamente para generar una plantilla anat
 
 <br>
 
-## 🖼️ Interfaz del Juego (Real)
+## 🖼️ Vistas del Juego Real
 
-<div align="center">
-  <img src="faunago/.design-qa-home.png" width="350" alt="FaunaGO Gameplay" style="border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-  <br><br>
-  <p><i>Pantalla de inicio, interfaz y diseño real de la aplicación (Design QA).</i></p>
-</div>
+<table align="center" style="border: none;">
+  <tr>
+    <td align="center" style="border: none;">
+      <b>Diorama y Sistema Voxel Isométrico</b><br><br>
+      <img src="faunago/assets/brand/hero_diorama.png" width="400" alt="Sistema Voxel" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+    </td>
+    <td align="center" style="border: none;">
+      <b>Interfaz del Nexo (App Móvil)</b><br><br>
+      <img src="faunago/design-qa-home.png" width="220" alt="FaunaGO Gameplay" style="border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+    </td>
+  </tr>
+</table>
 
 <br>
 
